@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Practica3_Base de datos</title>
+    <link rel="shortcut icon" href="img/favicon.ico">
+  </head>
+
+ 
+  <header>
+    <div class="container-fluid">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+
+        <a id="lblNombreUsuario" class="navbar-brand" href="#"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" >
+          <!--span class="navbar-toggler-icon"></span-->
+          <i class='fas fa-user-md'></i>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+
+          <form class="form-inline my-2 my-lg-0">
+            <button onclick="login()" class="btn btn-outline-light my-2 my-sm-0" >Login</button>
+          </form>
+
+        </div>
+
+      </nav>
+    </div>
+  </header>
+
+
+  <body id="body">
+    
+    <div class="container-fluid">
+      <div class="jumbotron">
+        <h3>Agregar Usuario</h3>
+
+        <div class="row">
+        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6">
+          <div class="text-center">
+            <span class="text-center">Nombre de Usuario</span>
+          </div>
+          <input type="text" class="form-control" id="txtUsernameAgregar">
+        </div>
+
+        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6">
+          <div class="text-center">
+            <span class="text-center">Correo</span>
+          </div>
+          <input type="email" class="form-control" id="txtCorreoAgregar">
+        </div>
+
+        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6">
+          <div class="text-center">
+            <span class="text-center">Password</span>
+          </div>
+          <input type="password" class="form-control" id="txtPasswordAgregar">
+        </div>
+
+        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6">
+          <div class="text-center">
+            <span class="text-center">Confirmar Password</span>
+          </div>
+          <input type="password" class="form-control" id="txtCPasswordAgregar">
+        </div>
+
+        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6">
+          <div class="text-center">
+            <span class="text-center">Nombre(s) y Apellido(s)</span>
+          </div>
+          <input type="text" class="form-control" id="txtNombreAgregar">
+        </div>
+
+        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6">
+          <div class="text-center">
+              <span class="text-center">Fecha de ingreso laboral</span>
+          </div>
+          <input type="date" class="form-control" id="txtFechaAgregar">
+        </div>
+
+        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6">
+          <div class="text-center">
+              <div class="text-center">
+                  <form>
+                      <span class="text-center">Puesto</span>
+                  </form>
+                  <input type="text" class="form-control" id="txtPuestoAgregar">
+              </div>
+          </div>
+        </div>
+            
+        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6">
+            <div class="text-center">
+                <form>
+                    <span class="text-center">Género</span>
+                </form>
+                <form>
+                    <select id="txtGeneroAgregar" name="Género">
+                        <option value="Femenino">Femenino</option>
+                        <option value="Masculino">Masculino</option>
+                        <option value="Otro">Otro</option>
+                    </select>
+                </form>
+            </div>
+        </div>
+
+        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6">
+            <div class="text-center">
+                <form>
+                    <span class="text-center">Turno</span>
+                </form>
+                <form>
+                    <select id="txtTurnoAgregar" name="Turno">
+                        <option value="Matutino">Matutino</option>
+                        <option value="Vespertino">Vespertino</option>
+                        <option value="Nocturno">Nocturno</option>
+                    </select>
+                </form>
+            </div>
+        </div>
+
+      </div>
+      </div>
+    </div>
+    
+    <div class="text-center">
+      <button onclick="addUser()" type="button" class="btn btn-success text-center w-50">Agregar</button>
+    </div>
+            
+            
+    
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script src="js/SignUp.js"></script>
+  </body>
+</html>

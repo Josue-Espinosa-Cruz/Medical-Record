@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Buscar y/o Eliminar Paciente</title>
+  </head>
+
+  <header>
+    <div class="container-fluid">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+
+        <a id="lblNombreUsuario" class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav">
+          <!--span class="navbar-toggler-icon"></span-->
+          <i class='fas fa-user-md'></i>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav"> <!--Listas sin número-->
+            <li class="nav-item"> <!--Lista con Componentes-->
+              <a class="nav-link" href="Ingresar.html" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Agregar Paciente</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="Buscar.html" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Buscar y/o Eliminar Paciente</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Editar.html" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Buscar y/o Editar Paciente</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Info.html" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Info de Usuario</a>
+            </li>
+          </ul>
+
+          <form class="form-inline my-2 my-lg-0">
+            <button onclick="logout()" class="btn btn-outline-light my-2 my-sm-0" >Cerrar Sesión</button>
+          </form>
+
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <body id="body">
+    
+    <div class="container-fluid">
+
+        <div class="jumbotron">
+          <h3>Buscar Usuario y Eliminar</h3>
+
+          <hr>
+
+          <div class="row">
+
+            <hr>
+
+            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-12 col-12">
+              <div class="input-group-prepend">
+                <span class="input-group-text">Nombre del paciente</span>
+              </div>
+              <input type="text" class="form-control" id="txtNombreBuscar">
+            </div>
+
+            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-12 col-12">
+              <div class="input-group-prepend">
+                <span class="input-group-text">Fecha de registro</span>
+              </div>
+              <input type="date" class="form-control" id="txtFechaBuscar" placeholder="''">
+            </div>
+
+            <hr>
+
+          </div>
+
+          <hr>
+
+          <div class="text-center">
+            <button onclick="getUsersByNombreProyecto()" type="button" class="btn btn-success text-center w-50">Buscar</button>
+          </div>
+          
+          <div id="lista" class="text-center"> 
+              
+          </div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script src="./js/client.js"></script>
+  </body>
+</html>
